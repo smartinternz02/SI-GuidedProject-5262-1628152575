@@ -1,0 +1,22 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>DPB</title>
+<link rel="stylesheet" href="homestyles.css">
+</head>
+<body>
+<div class="container">
+<div>
+
+<h1 th:text="'Your curent amount is ' + ${user.amount}"></h1>
+
+<form th:action="@{/amountsubmit}"  method="POST">
+<label for="amount">Add Amount:</label>
+<input type ="number" min="10" max="1000000" name="amount"><input type="submit"><br><br><br>
+<a th:href="@{/makeexpense}">Make Payment</a><br><br><br><br>
+<a th:href="@{/makeexpense}">Payment History</a>
+
+</form>
+</div>
+</div>
+</body>
+</html>

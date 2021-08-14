@@ -1,0 +1,24 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Registration</title>
+<link rel="stylesheet" href="regstyle.css">
+</head>
+<body>
+<div class="container">
+<div class="inner">
+<div class="form">
+<h1>DPB</h1>
+<form th:action="@{/registersubmit}" method="POST">
+	 <input type="text" placeholder="Name" name="name"><br>
+     <input type="email" placeholder="Email" name="email"><br>
+     <input type="password" placeholder="Password" name="password"><br>
+     <input type="submit">
+   </form>
+</div>
+<div class="signup">
+<h1>digital-Payment-Book<br><p>Already have an account?<br><br><a th:href="@{/login}">login</a></p></h1>
+</div>
+</div>
+</div>
+</body>
+</html>
