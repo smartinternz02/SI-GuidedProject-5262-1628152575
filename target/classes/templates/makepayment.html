@@ -1,0 +1,37 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>ET-Make Payment</title>
+<link rel="stylesheet" href="makeexpense.css">
+</head>
+<body>
+<div class="container">
+<div>
+<h1 th:text="'Your curent amount is ' + ${amount}"></h1>
+<form th:action="@{/expensesubmit}" method="POST">
+<label for="expense">Type of payment</label><br>
+<select id="expense" name="expense">
+    <option value="credit">credit</option>
+    <option value="debit">Debit</option>
+    <option value="upi">UPI</option>
+   
+  </select><br>
+  <div class="input">
+  <label for="expenseamount">payment Amount</label><br>
+  <input type="number" name="expenseamount" min="10" max="1000000"><br>
+  </div>
+  <div class="input">
+  <label for="date">Date of payment</label><br>
+  <input type="date" name="date">
+  <br>
+  <input type="submit"><br><br>
+  <a th:href="@{/home}">Home</a>
+  </div>
+
+</form>
+<footer>&copy payment</footer>
+</div>
+</div>
+
+</body>
+
+</html>
