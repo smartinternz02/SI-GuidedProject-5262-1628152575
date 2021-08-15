@@ -4,5 +4,7 @@ Once a user created their account they can login to their account by using their
 
 
 
-Here is the google drive link for the demonstration video and the documentation
+Here is the google drive link for the demonstration video and the documentation.
+
+
 Link:  https://drive.google.com/drive/u/1/my-drive
